@@ -1,13 +1,11 @@
 <div class="w-1/6 votes flex flex-col">
   <div class="upvote">
-    <i class="far fa-thumbs-up"></i>
-    <span>100</span>
-    <p>100</p>
+    <i (click)="upvote()" class="far fa-thumbs-up"></i>
+    <span>{{quote.upvote}}</span>
   </div> 
-  <div class="downvote">
-    <i class="far fa-thumbs-down"></i>
-    <span>003</span>
-    <p>100</p>
+  <div class="downvote mr-5">
+      <i (click)="downvote()" class="far fa-thumbs-down"></i>
+    <span>{{quote.downvote}}</span>
   </div>
   <div class="delete">
     <i (click)='quoteDelete(true)' class="far fa-trash-alt hover:text-red"></i>

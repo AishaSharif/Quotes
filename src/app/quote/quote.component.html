@@ -1,17 +1,17 @@
 <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 <ul>
-  <li *ngFor="let quote of quotes">
-    <section class="flex quotes mt-10 pb-4 border-b-2 border-grey-light">
-        <app-quote-details></app-quote-details>
-        <div class="w-5/6">
-          <p class="text-xs mb-4">Posted by {{quote.userName}}</p>
-          <p class="text-3xl">
-            {{quote.quote}}
-          </p>
-          <p class="text-lg mt-1 underline">
-            {{quote.author}}
-          </p>
-        </div>
-      </section>
-  </li>
-</ul>
+    <li *ngFor="let quote of quotes">
+      <section class="flex quotes mt-10 pb-4 border-b-2 border-grey-light">
+          <app-quote-details [quote]="quote" (onDeleteQuote)="deleteQuote($event, i)"></app-quote-details>
+          <div class="w-5/6">
+            <p class="text-xs mb-4">Posted by {{quote.userName}}</p>
+            <p class="text-3xl">
+              {{quote.quote}}
+            </p>
+            <p class="text-lg mt-1 underline">
+              {{quote.author}}
+            </p>
+          </div>
+        </section>
+    </li>
+  </ul>
