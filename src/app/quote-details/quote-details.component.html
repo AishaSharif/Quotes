@@ -1,3 +1,15 @@
-<p>
-  quote-details works!
-</p>
+<div class="w-1/6 votes flex flex-col">
+  <div class="upvote">
+    <i class="far fa-thumbs-up"></i>
+    <span>100</span>
+    <p>100</p>
+  </div> 
+  <div class="downvote">
+    <i class="far fa-thumbs-down"></i>
+    <span>003</span>
+    <p>100</p>
+  </div>
+  <div class="delete">
+    <i (click)='quoteDelete(true)' class="far fa-trash-alt hover:text-red"></i>
+  </div>
+</div>

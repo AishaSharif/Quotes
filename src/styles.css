@@ -12,3 +12,6 @@ body{
 i.far {
   font-size: 260%;
 }
+ul{
+  list-style: none;
+}

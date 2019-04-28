@@ -1,27 +1,14 @@
+<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 <ul>
-  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   <li *ngFor="let quote of quotes">
-    <section class="flex quotes mt-20 pb-4 border-b-2 border-grey-light">
-        <div class="w-1/6 votes flex flex-col">
-          <div class="upvote">
-            <i class="far fa-thumbs-up"></i>
-            <span>100</span>
-            <p>100</p>
-          </div> 
-          <div class="downvote">
-            <i class="far fa-thumbs-down"></i>
-            <span>003</span>
-            <p>100</p>
-          </div>
-          <div class="delete">
-            <i class="far fa-trash-alt hover:text-red"></i>
-          </div>
-        </div>
+    <section class="flex quotes mt-10 pb-4 border-b-2 border-grey-light">
+        <app-quote-details></app-quote-details>
         <div class="w-5/6">
+          <p class="text-xs mb-4">Posted by {{quote.userName}}</p>
           <p class="text-3xl">
             {{quote.quote}}
           </p>
-          <p class="text-lg">
+          <p class="text-lg mt-1 underline">
             {{quote.author}}
           </p>
         </div>
