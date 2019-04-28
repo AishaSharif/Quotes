@@ -15,3 +15,6 @@ i.far {
 ul{
   list-style: none;
 }
+..md\:w-1\/2{
+  widows: 44%;
+}

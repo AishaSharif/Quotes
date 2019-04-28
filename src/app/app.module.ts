@@ -8,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { UpvotesDirective } from './upvotes.directive';
+import { TimeCounterPipe } from './time-counter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { UpvotesDirective } from './upvotes.directive';
     QuoteFormComponent,
     QuoteDetailsComponent,
     UpvotesDirective,
+    TimeCounterPipe,
   ],
   imports: [
     BrowserModule,
