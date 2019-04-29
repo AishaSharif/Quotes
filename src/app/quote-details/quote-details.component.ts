@@ -18,12 +18,6 @@ export class QuoteDetailsComponent implements OnInit {
   downvote(){
     this.quote.downvote++;
   }
-  highestUpvote(){
-    // let highestVotes = this.quote[0]
-    // for (var i = 0; i = this.quote.length; i++){
-    //   this.quote.upvote.max()
-    // }
-  }
   constructor() { }
   ngOnInit() { }
 }

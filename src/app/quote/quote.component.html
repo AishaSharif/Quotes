@@ -1,11 +1,11 @@
-<app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+<app-quote-form (addQuote)="addQuote($event)"></app-quote-form>
 <ul>
     <li *ngFor="let quote of quotes">
       <section class="flex quotes mt-10 pb-4 border-b-2 border-grey-light">
           <app-quote-details [quote]="quote" (onDeleteQuote)="deleteQuote($event, i)"></app-quote-details>
-          <div class="w-5/6">
+          <div appUpvotes class="w-5/6">
             <p class="text-xs mb-4">
-              Posted by {{quote.userName}} {{quote.date | timeCounter}} seconds ago
+              Posted by {{quote.userName}} {{quote.date | timeCounter}} hours ago
             </p>
             <p class="text-3xl">
               {{quote.quote}}

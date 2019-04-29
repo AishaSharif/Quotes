@@ -7,10 +7,8 @@ import { Quote } from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes = [
-    new Quote(1, "jane doe", "Robert A. Heinlein", "They didn't want it good, they wanted it Wednesday", 0, 0, new Date())
-  ]
-  addNewQuote(quote){
+  quotes = [ ]
+  addQuote(quote){
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
@@ -22,6 +20,13 @@ export class QuoteComponent implements OnInit {
         this.quotes.splice(index, 1);
       }
     }
+  }
+  highlightQoute(){
+    for (var i = 0; i = this.quotes.length; i++){
+      if (this.quotes[i].upvote > this.quotes[i].highestUpvoted){
+        this.quotes[i].highestUpvoted = this.quotes[i].upvote
+      }
+    }  
   }
   constructor() { }
   ngOnInit() { }
