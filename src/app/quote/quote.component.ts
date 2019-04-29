@@ -8,7 +8,7 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes = [
-    new Quote(1, "jane doe", "Robert A. Heinlein", "They didn't want it good, they wanted it Wednesday", 0, 0)
+    new Quote(1, "jane doe", "Robert A. Heinlein", "They didn't want it good, they wanted it Wednesday", 0, 0, new Date())
   ]
   addNewQuote(quote){
     let quoteLength = this.quotes.length;
