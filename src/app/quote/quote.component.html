@@ -5,7 +5,7 @@
           <app-quote-details [quote]="quote" (onDeleteQuote)="deleteQuote($event, i)"></app-quote-details>
           <div class="w-5/6">
             <p class="text-xs mb-4">
-              Posted by {{quote.userName}} {{quote.date | timeCounter}} ago
+              Posted by {{quote.userName}} {{quote.date | timeCounter}} seconds ago
             </p>
             <p class="text-3xl">
               {{quote.quote}}
