@@ -11,7 +11,7 @@ export class TimeCounterPipe implements PipeTransform {
     const secondsInDay = 86400;
     var dateDifferenceSeconds = difference * .001;
     var dateCounter = Math.round(dateDifferenceSeconds / secondsInDay);
-    dateCounter / 60;
+    // dateCounter / 60;
 
     if (dateCounter >= 1){
       return dateCounter;
